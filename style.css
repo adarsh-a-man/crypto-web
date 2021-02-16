@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+:root {
+  --orange: rgb(221, 79, 28);
+  --black: rgb(31, 28, 28);
+}
+.header {
+  background: url("./heading\ pic.jpeg") center no-repeat;
+  height: 100vh;
+  color: white;
+  /* clip-path: circle(180vh at 50% -70vh); */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 20%,
+    100% 90%,
+    50% 100%,
+    50% 100%,
+    0 90%,
+    0% 20%
+  );
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  padding-left: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.menu {
+  display: flex;
+  transform: translate(100px);
+}
+.menu li {
+  margin-left: 50px;
+  cursor: pointer;
+}
+.menu li a:hover {
+  color: var(--orange);
+}
+.header-title {
+  margin-top: 150px;
+  padding-left: 150px;
+  font-size: 25px;
+  position: relative;
+}
+.header-title:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: var(--orange);
+  transform: translateX(100px);
+}
+.header-title p {
+  opacity: 0.8;
+}
+.header-middle {
+  padding-left: 100px;
+  margin-top: 50px;
+}
+.header-middle p {
+  opacity: 0.6;
+}
+.header .button {
+  margin-top: 100px;
+  padding-left: 100px;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-ser,
+.quote,
+.cryptotrade button,
+.teams button {
+  background: var(--orange);
+  color: white;
+  border: 1px solid var(--orange);
+  transition: all 0.5s ease;
+}
+.btn-ser:hover,
+.quote:hover,
+.cryptotrade button:hover,
+.teams button:hover {
+  /* color: var(--orange); */
+  background: transparent;
+}
+.btn-join {
+  background: transparent;
+  color: white;
+  border: 1px solid orangered;
+  transition: all 0.5s ease;
+}
+.btn-join:hover {
+  background: var(--orange);
+  color: white;
+  border: 1px solid white;
+}
+.about {
+  padding: 100px;
+}
+.about-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 50px;
+}
+.about-head p:nth-child(1) {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-size: bold;
+  margin-bottom: 10px;
+}
+.about-head h1 {
+  color: rgb(31, 28, 28);
+  margin-bottom: 10px;
+}
+.about-head p:nth-child(3) {
+  opacity: 0.7;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+}
+.about_left {
+  padding-top: 50px;
+  padding-right: 50px;
+}
+.about_left .points {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.about_left .points button {
+  outline: none;
+  border: none;
+  background-color: rgb(43, 43, 95);
+  color: var(--orange);
+  font-size: 15px;
+  margin-right: 20px;
+}
+.about_left p {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.about_right img {
+  width: 400px;
+}
+
+/* chart section styling */
+.chart {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  padding-bottom: 0px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+.chart-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.chart-head p:nth-child(1) {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-size: bold;
+  margin-bottom: 10px;
+}
+.chart-head h1 {
+  color: rgb(31, 28, 28);
+  margin-bottom: 10px;
+}
+.chart-head p:nth-child(3) {
+  opacity: 0.7;
+}
+
+.chart .my-chart {
+  margin-bottom: -20px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+.cryptotrade {
+  padding-top: 100px;
+  display: flex;
+  height: 500px;
+}
+.cryptotrade .left-side {
+  width: 50%;
+  background: url("./hd\ bitcoin.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.cryptotrade .right-side {
+  width: 50%;
+  padding: 50px;
+}
+.cryptotrade .right-side p:nth-child(1) {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-size: bold;
+  margin-bottom: 10px;
+}
+.cryptotrade .right-side h1 {
+  color: rgb(31, 28, 28);
+  margin-bottom: 10px;
+}
+.cryptotrade .right-side p:nth-child(3) {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+.crypto-points .point {
+  margin-bottom: 20px;
+}
+.crypto-points .point i {
+  color: var(--orange);
+  margin-right: 20px;
+}
+.cryptotrade button:hover,
+.teams button:hover {
+  color: var(--orange);
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  text-align: center;
+}
+@media (max-width: 914px) {
+  .teams {
+    padding: 100px 10px;
+  }
+}
+.teams-head p:nth-child(1) {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-size: bold;
+  margin-bottom: 10px;
+}
+.teams-head h1 {
+  color: rgb(31, 28, 28);
+  margin-bottom: 10px;
+}
+.teams-head p:nth-child(3) {
+  opacity: 0.7;
+}
+.members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 80px;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  text-align: center;
+}
+.member .mem-img {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.member .mem-img img {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+  transform: translateY(4px);
+}
+.mem-abt h2 {
+  margin-bottom: 8px;
+}
+.mem-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.mem-social i {
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: rgba(43, 43, 95);
+}
+
+/* datas starting */
+.datas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-color: rgb(43, 43, 95);
+  color: white;
+  text-align: center;
+}
+.datas-head p:nth-child(1) {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-size: bold;
+  margin-bottom: 10px;
+}
+.datas-head h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+.datas-head p:nth-child(3) {
+  opacity: 0.7;
+}
+.data-items {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-items .items i {
+  transform: translateY(20px);
+  font-size: 40px;
+}
+.data-items .items {
+  margin-right: 100px;
+}
+.data-items .items .items_logo {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: translateX(35px);
+}
+.data-items .items h1,
+.data-items .items p {
+  transform: translateX(20px);
+  margin-top: 10px;
+}
+.data-items .items h1 {
+  color: var(--orange);
+}
+/* sponsors */
+.sponsors-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+.sponsors-items .items {
+  margin: 50px auto;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  background: rgb(43, 43, 95);
+  color: white;
+}
+.foot_head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.foot_bottom {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.foot_bottom .bottom_first p {
+  margin-bottom: 100px;
+}
+.foot_bottom .bottom_first i {
+  margin-right: 20px;
+}
+.bottom_first {
+  width: 40%;
+}
+.bottom_first p {
+  opacity: 0.6;
+}
+.bottom_second p {
+  opacity: 0.6;
+}
+.copyright {
+  background: white;
+  display: flex;
+  padding: 20px 100px;
+  justify-content: space-between;
+}
+
+/* media queries */
+@media (max-width: 990px) {
+  .header .navbar .menu {
+    display: none;
+  }
+}
